@@ -17,11 +17,10 @@
             <td th:text="${user.getId()}">user</td>
             <td th:text="${user.getLogin()}">user</td>
             <td th:text="${user.getPassword()}">user</td>
-            <td><a href="/editUser?id= />">Edit</a>
+            <td><a th:href="@{/editUser/{id}(id=${user.getId()})}">Edit</a>
                 <a th:href="@{/deleteUser/{id}(id=${user.getId()})}">Delete</a></td>
             </td>
-<!--            "@{/people/{id}/edit(id=${person.getId()})}"-->
-<!--            "@{/people/{id}(id=${person.getId()})}"-->
+
         </tr>
 
     </div>
