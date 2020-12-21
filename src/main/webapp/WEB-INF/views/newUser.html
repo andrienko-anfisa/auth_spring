@@ -8,11 +8,11 @@
 <form th:method="POST"  th:object="${user}">
     <label for="login">Enter login: </label>
     <input type="text" th:field="*{login}" id="login"/>
-    <div style="color:red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}">Name Error</div>
+<!--    <div style="color:red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}">Name Error</div>-->
     <br/>
     <label for="password">Enter password: </label>
     <input type="password" th:field="*{password}" id="password"/>
-    <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div>
+<!--    <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div>-->
     <br/>
 
     <input type="submit" value="Create!"/>

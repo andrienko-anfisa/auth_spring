@@ -46,4 +46,19 @@ public class UsersController {
         dbService.addUser(user);
         return "redirect:/allUsers";
     }
+
+//    удаление пользователя
+    @GetMapping("/deleteUser/{id}")
+    public String delete(@PathVariable("id") long id) {
+        dbService.deleteUser(id);
+        return "redirect:/allUsers";
+    }
+
+
+    @GetMapping("/{id}")
+    public String show(@PathVariable("id") long id, Model model) throws DBException {
+        model.addAttribute("user", dbService.getUserById(id));
+        return "showUser";
+    }
+
 }

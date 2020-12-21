@@ -13,13 +13,13 @@ public class User {
     private long id;
 
     @Column(unique = true)
-    @NotEmpty(message = "Login should not be empty")
-    @Size(min = 5, max = 35, message = "Login should be between 5 and 25 characters")
+//    @NotEmpty(message = "Login should not be empty")
+//    @Size(min = 5, max = 35, message = "Login should be between 5 and 25 characters")
     private String login;
 
     @Column
-    @NotEmpty(message = "Password should not be empty")
-    @Size(min = 5, max = 35, message = "Password should be between 5 and 25 characters")
+//    @NotEmpty(message = "Password should not be empty")
+//    @Size(min = 5, max = 35, message = "Password should be between 5 and 25 characters")
     private String password;
 
     public User() {

@@ -18,7 +18,7 @@
             <td th:text="${user.getLogin()}">user</td>
             <td th:text="${user.getPassword()}">user</td>
             <td><a href="/editUser?id= />">Edit</a>
-                <a href="/deleteUser?id=<c:out value='${user.getId()}' />">Delete</a></td>
+                <a href="/deleteUser/id=user.getId()/>">Delete</a></td>
             </td>
 
         </tr>
