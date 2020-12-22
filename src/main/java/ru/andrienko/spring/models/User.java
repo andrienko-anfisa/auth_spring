@@ -1,5 +1,6 @@
 package ru.andrienko.spring.models;
 
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -38,6 +39,10 @@ public class User {
 
     public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getLogin() {

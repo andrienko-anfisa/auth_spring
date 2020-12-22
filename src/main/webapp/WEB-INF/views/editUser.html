@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="POST"  th:action="@{/editUser}">
+    <label for="id">Id: </label>
+    <input type="text" readonly name="id" th:value="${user.id}" id="id"/>
+    <br/>
+
+    <label for="login">Enter login: </label>
+    <input type="text" name="login" th:value="${user.login}" id="login"/>
+<!--    <div style="color:red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}">Login Error</div>-->
+    <br/>
+    <label for="password">Enter password: </label>
+    <input type="password" name="password" th:value="${user.password}" id="password"/>
+<!--    <div style="color:#ff0000" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div>-->
+    <br/>
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

@@ -54,11 +54,16 @@ public class UsersController {
         return "redirect:/allUsers";
     }
 
-
-    @GetMapping("/{id}")
-    public String show(@PathVariable("id") long id, Model model) throws DBException {
+//редактирование пользователя
+    @GetMapping("/editUser/{id}")
+    public String edit(Model model, @PathVariable("id") int id) throws DBException {
         model.addAttribute("user", dbService.getUserById(id));
-        return "showUser";
+        return "editUser";
     }
 
+    @PostMapping("/editUser")
+    public String update(@ModelAttribute("user") User user) {
+        dbService.editUser(user);
+        return "redirect:/allUsers";
+    }
 }
